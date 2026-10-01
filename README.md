@@ -87,8 +87,8 @@ genai-learning-journey/
 **1. Clone this repo**
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/<ThakurPradeepRawat>/<genai-python-langchain-practice>.git
+cd <Genai python langcahin practice>
 ```
 
 **2. Create a virtual environment**
