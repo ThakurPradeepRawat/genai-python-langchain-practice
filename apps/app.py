@@ -1,6 +1,5 @@
 import streamlit as st
-from apps.agent import call_agent
-from chat import call_model
+from agent import call_agent
 
 st.set_page_config(
     page_title="Pradeep Second Memory",
@@ -149,7 +148,7 @@ for message in st.session_state.messages:
 prompt = st.chat_input("Message AI Assistant...")
 
 if prompt:
-    res = call_model(prompt)
+    res = call_agent(prompt)
 
     # UI only — temporary message
     st.session_state.messages.append({
