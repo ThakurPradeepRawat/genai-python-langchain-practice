@@ -30,27 +30,3 @@ vector_store = Chroma.from_documents(
     persist_directory="./vector_db"
 )
 
-@tool
-def find_vector(user_query: str):
-    """
-    Search the candidate's resume.
-
-    Use this tool whenever you need information about the candidate's
-    name, profile, experience, internships, projects, education,
-    technical skills, certifications, achievements, responsibilities,
-    technologies, tools, or any other resume-specific information.
-
-    Pass a specific search query describing exactly what information
-    you need from the resume.
-    """
-
-    results = vector_store.similarity_search(
-        user_query,
-        k=4
-    )
-    
-    context = "\n\n".join(
-        doc.page_content for doc in results
-    )
-    print(f'query= {user_query} ,  context = {context}')
-    return context
